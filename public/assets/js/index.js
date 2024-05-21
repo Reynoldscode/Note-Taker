@@ -4,14 +4,16 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
+let clearBtn; // Define clearBtn variable
 
+// Check if the current URL path is '/notes'
 if (window.location.pathname === '/notes') {
   noteForm = document.querySelector('.note-form');
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
   newNoteBtn = document.querySelector('.new-note');
-  clearBtn = document.querySelector('.clear-btn');
+  clearBtn = document.querySelector('.clear-btn'); // Assign clearBtn element
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
@@ -23,6 +25,16 @@ const show = (elem) => {
 // Hide an element
 const hide = (elem) => {
   elem.style.display = 'none';
+};
+
+// Function to show the "New Note" button
+const showNewNoteButton = () => {
+  newNoteBtn.style.display = 'inline';
+};
+
+// Function to hide the "New Note" button
+const hideNewNoteButton = () => {
+  newNoteBtn.style.display = 'none';
 };
 
 // activeNote is used to keep track of the note in the textarea
@@ -80,6 +92,7 @@ const handleNoteSave = () => {
   saveNote(newNote).then(() => {
     getAndRenderNotes();
     renderActiveNote();
+    hideNewNoteButton(); // Hide the "New Note" button after saving the note
   });
 };
 
@@ -124,6 +137,7 @@ const handleRenderBtns = () => {
     hide(saveNoteBtn);
   } else {
     show(saveNoteBtn);
+    showNewNoteButton(); // Show the "New Note" button when both title and text are present
   }
 };
 
