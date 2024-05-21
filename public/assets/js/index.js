@@ -4,7 +4,7 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
-let clearBtn; // Define clearBtn variable
+let clearBtn; 
 
 // Check if the current URL path is '/notes'
 if (window.location.pathname === '/notes') {
