@@ -21,4 +21,14 @@ when that note appears in the right-hand column and a "New Note" button appears 
 
 When users click on the "New Note" button in the navigation at the top of the page then users are presented with empty fields to enter a new note title and the note’s text in the right-hand column and the button disappears.
 
+my github: https://github.com/Reynoldscode/Note-Taker
 
+render url: https://note-taker-wezz.onrender.com/
+
+
+Gif: src: ![alt text](<Untitled_ May 21, 2024 3_30 PM.gif>)
+
+screenshot: ![alt text](<Screenshot (2045).png>)
+
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
